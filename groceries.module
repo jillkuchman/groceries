@@ -26,11 +26,10 @@ function groceries_display() {
         'price' => 0.5;
         'quantity' => 4;
     );
-    // $output = '';
+    $output = '';
     foreach ($grocery_list as $list_item) {
         // $cost = $list_item['price']*$list_item['quantity'];
-        // $output += $list_item;
-        print '$list_item';
+        $output += $list_item;
     }
-    // return $output;
+    return 'hi';
 }
