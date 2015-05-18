@@ -15,21 +15,29 @@ function groceries_menu()
 function groceries_display() {
     $grocery_list = array();
     $grocery_list['eggs'] = array(
-        'price' => 1.99;
-        'quantity' => 2;
+        'price' => 1.99,
+        'quantity' => 2
     );
     $grocery_list['milk'] = array(
-        'price' => 2.49;
-        'quantity' => 3;
+        'price' => 2.49,
+        'quantity' => 3
     );
     $grocery_list['apples'] = array(
-        'price' => 0.5;
-        'quantity' => 4;
+        'price' => 0.5,
+        'quantity' => 4
     );
     $output = '';
-    foreach ($grocery_list as $list_item) {
-        // $cost = $list_item['price']*$list_item['quantity'];
-        $output += $list_item;
+    $total_price = 0;
+
+    foreach($grocery_list as $item_to_buy => $value) {
+
+        $output .= '<ul><li><b>' . $item_to_buy . '</b>: $' . $value['price']*$value['quantity'] . '</li></ul>';
     }
-    return 'hi';
+
+    foreach($grocery_list as $item_to_buy) {
+        $total_price += $item_to_buy['price'] * $item_to_buy['quantity'];
+    }
+
+    return $output . '<p> Total: $' . $total_price . '</p>';
+
 }
