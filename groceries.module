@@ -37,7 +37,6 @@ function groceries_display() {
     foreach($grocery_list as $item_to_buy) {
         $total_price += $item_to_buy['price'] * $item_to_buy['quantity'];
     }
-    
     return $output . '<p> Total: $' . $total_price . '</p>';
 
 }
