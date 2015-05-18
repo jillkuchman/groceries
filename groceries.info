@@ -1,0 +1,5 @@
+name = Groceries
+description = Creates a menu link for a page displaying a grocery list.
+package = Epicodus Examples
+core = 7.x
+files[] = groceries.module

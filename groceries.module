@@ -1,0 +1,28 @@
+<?php
+
+function groceries_menu()
+{
+    $items = array();
+    $items['groceries'] = array(
+        'title' => 'Groceries',
+        'page callback' => 'groceries_display',
+        'access callback' => TRUE,
+        'type' => MENU_NORMAL_ITEM,
+    );
+    return $items;
+}
+
+function groceries_display() {
+    $grocery_list = array();
+    $grocery_list['eggs'] = array(
+        'price' => 1.99;
+        'quantity' => 2;
+    );
+    $grocery_list['milk'] = array(
+        'price' => 2.49;
+        'quantity' => 3;
+    );
+    return '
+
+    ';
+}
